@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   /* NBA-Themed Color Palette */
   --color-bg-start: #1a1a2e;
@@ -195,23 +199,37 @@ button {
 .stat-box {
   background: rgba(0, 0, 0, 0.3);
   border-radius: var(--radius-md);
-  padding: 1rem;
+  padding: 0.75rem 1rem;
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .stat-value {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--color-gold);
 }
 
 .stat-label {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: var(--color-text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-top: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .stat-box {
+    padding: 1rem;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+  }
 }
 
 /* Rank Number Styling */

@@ -14,16 +14,16 @@ const FeaturedPlayer = ({ filter }) => {
             className="card overflow-hidden"
             data-aos="fade-up"
         >
-            {/* THREE EQUAL SECTIONS - Same as PlayerCard */}
-            <div style={{ display: 'flex', flexDirection: 'row', minHeight: '280px' }}>
+            {/* THREE EQUAL SECTIONS - Responsive Layout */}
+            <div className="flex flex-col md:flex-row" style={{ minHeight: '280px' }}>
 
                 {/* SECTION 1 - Image (1/3) */}
                 <div
                     style={{ flex: 1 }}
                     className="bg-gradient-to-br from-[#16213e] to-[#0f3460] flex flex-col items-center justify-center p-6 relative"
                 >
-                    <div className="absolute top-4 left-4">
-                        <span className="text-5xl font-black text-gold" style={{ textShadow: '0 0 40px rgba(255, 215, 0, 0.6)' }}>
+                    <div className="absolute top-3 left-3 md:top-4 md:left-4">
+                        <span className="text-4xl md:text-5xl font-black text-gold" style={{ textShadow: '0 0 40px rgba(255, 215, 0, 0.6)' }}>
                             #1
                         </span>
                     </div>
@@ -31,12 +31,12 @@ const FeaturedPlayer = ({ filter }) => {
                     <img
                         src={stockton.image}
                         alt={stockton.name}
-                        className="w-32 h-32 object-cover rounded-full border-4 border-[#ffd700]/50 shadow-2xl"
+                        className="w-24 h-24 md:w-32 md:h-32 object-cover rounded-full border-4 border-[#ffd700]/50 shadow-2xl"
                         onError={(e) => { e.target.style.display = 'none'; }}
                     />
 
-                    <h2 className="text-2xl font-bold text-white mt-4 text-center">{stockton.name}</h2>
-                    <p className="text-sm text-muted">{stockton.team}</p>
+                    <h2 className="text-xl md:text-2xl font-bold text-white mt-3 md:mt-4 text-center">{stockton.name}</h2>
+                    <p className="text-xs md:text-sm text-muted">{stockton.team}</p>
                     <div className="mt-2">
                         <span className="badge badge-hof">Hall of Fame</span>
                     </div>
@@ -45,22 +45,22 @@ const FeaturedPlayer = ({ filter }) => {
                 {/* SECTION 2 - Stats (1/3) */}
                 <div
                     style={{ flex: 1, borderLeft: '1px solid rgba(255,255,255,0.1)', borderRight: '1px solid rgba(255,255,255,0.1)' }}
-                    className="p-6 flex flex-col justify-center"
+                    className="p-4 md:p-6 flex flex-col justify-center border-t md:border-t-0"
                 >
                     <p className="text-xs uppercase text-orange font-semibold mb-1 tracking-wider">All-Time Leader</p>
-                    <p className="text-xs uppercase text-muted font-semibold mb-4 tracking-wider">Career Stats</p>
+                    <p className="text-xs uppercase text-muted font-semibold mb-3 md:mb-4 tracking-wider">Career Stats</p>
 
-                    <div className="space-y-3">
+                    <div className="space-y-2 md:space-y-3">
                         <div className="stat-box">
-                            <div className="stat-value text-2xl">{stockton.totalAssists.toLocaleString()}</div>
+                            <div className="stat-value text-xl md:text-2xl">{stockton.totalAssists.toLocaleString()}</div>
                             <div className="stat-label">🏀 Total Assists</div>
                         </div>
                         <div className="stat-box">
-                            <div className="stat-value text-2xl">{stockton.stats.apg}</div>
+                            <div className="stat-value text-xl md:text-2xl">{stockton.stats.apg}</div>
                             <div className="stat-label">📊 Assists Per Game</div>
                         </div>
                         <div className="stat-box">
-                            <div className="stat-value text-2xl">{stockton.stats.games.toLocaleString()}</div>
+                            <div className="stat-value text-xl md:text-2xl">{stockton.stats.games.toLocaleString()}</div>
                             <div className="stat-label">🎮 Games Played</div>
                         </div>
                     </div>
@@ -69,11 +69,11 @@ const FeaturedPlayer = ({ filter }) => {
                 {/* SECTION 3 - Bio (1/3) */}
                 <div
                     style={{ flex: 1 }}
-                    className="p-6 flex flex-col justify-between bg-gradient-to-br from-transparent to-[#0a0a12]/30"
+                    className="p-4 md:p-6 flex flex-col justify-between bg-gradient-to-br from-transparent to-[#0a0a12]/30 border-t md:border-t-0"
                 >
                     <div>
-                        <p className="text-xs uppercase text-muted font-semibold mb-3 tracking-wider">About</p>
-                        <p className="text-sm text-gray-300 leading-relaxed italic">
+                        <p className="text-xs uppercase text-muted font-semibold mb-2 md:mb-3 tracking-wider">About</p>
+                        <p className="text-xs md:text-sm text-gray-300 leading-relaxed italic">
                             "{stockton.bio}"
                         </p>
                     </div>
@@ -82,7 +82,7 @@ const FeaturedPlayer = ({ filter }) => {
                         href={stockton.profileUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn btn-gradient w-full text-center mt-4"
+                        className="btn btn-gradient w-full text-center mt-3 md:mt-4"
                     >
                         View Full Profile →
                     </a>

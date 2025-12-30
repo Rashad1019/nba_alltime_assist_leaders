@@ -21,12 +21,12 @@ const Hero = () => {
 
                 {/* Main Title with Gradient */}
                 <h1
-                    className="font-bold mb-5 animate-fade-in-up"
+                    className="font-bold mb-5 animate-fade-in-up px-2"
                     style={{
-                        fontSize: 'clamp(2.5rem, 6vw, 4rem)',
+                        fontSize: 'clamp(1.75rem, 8vw, 4rem)',
                         fontWeight: 700,
                         letterSpacing: '-1px',
-                        lineHeight: 1.1,
+                        lineHeight: 1.2,
                         background: 'linear-gradient(135deg, #ff6b35 0%, #ffd700 50%, #ff6b35 100%)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
@@ -34,14 +34,14 @@ const Hero = () => {
                         filter: 'drop-shadow(0 0 30px rgba(255, 107, 53, 0.3))'
                     }}
                 >
-                    The Greatest Passers<br />in NBA History
+                    The Greatest Passers in NBA History
                 </h1>
 
                 {/* Subtitle */}
                 <p
-                    className="mx-auto animate-fade-in-up"
+                    className="mx-auto animate-fade-in-up px-4"
                     style={{
-                        fontSize: '1.3rem',
+                        fontSize: 'clamp(0.95rem, 3.5vw, 1.3rem)',
                         color: '#b8b8b8',
                         maxWidth: '700px',
                         marginTop: '20px',

@@ -97,10 +97,10 @@ const StatsVisualization = () => {
         <section className="py-16" id="statistics">
             <div className="container">
                 <div data-aos="fade-up" className="text-center mb-12">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                    <h2 className="text-3xl md:text-4xl md:text-5xl font-bold mb-4">
                         <span className="text-gold">Statistical</span> Breakdown
                     </h2>
-                    <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+                    <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto">
                         A detailed look at the numbers that define greatness
                     </p>
                 </div>
@@ -118,11 +118,11 @@ const StatsVisualization = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
                         {/* Column 1: #1 All-Time Leader */}
                         <div className="text-center md:text-left border-b md:border-b-0 md:border-r border-white/10 pb-8 md:pb-0 md:pr-8 last:border-0">
-                            <h3 className="text-[#ffd700] text-sm font-bold uppercase tracking-wider mb-3">
+                            <h3 className="text-[#ffd700] text-xs md:text-sm font-bold uppercase tracking-wider mb-3">
                                 #1 All-Time Leader
                             </h3>
-                            <div className="text-2xl font-bold text-white mb-2">{players[0].name}</div>
-                            <div className="text-5xl font-black text-gold mb-1" style={{ textShadow: '0 0 20px rgba(255, 215, 0, 0.3)' }}>
+                            <div className="text-xl md:text-2xl font-bold text-white mb-2">{players[0].name}</div>
+                            <div className="text-4xl md:text-5xl font-black text-gold mb-1" style={{ textShadow: '0 0 20px rgba(255, 215, 0, 0.3)' }}>
                                 {players[0].totalAssists.toLocaleString()}
                             </div>
                             <div className="text-gray-400 text-sm">Career Assists</div>
@@ -130,11 +130,11 @@ const StatsVisualization = () => {
 
                         {/* Column 2: Best APG */}
                         <div className="text-center md:text-left border-b md:border-b-0 md:border-r border-white/10 pb-8 md:pb-0 md:pr-8 last:border-0">
-                            <h3 className="text-[#ff6b35] text-sm font-bold uppercase tracking-wider mb-3">
+                            <h3 className="text-[#ff6b35] text-xs md:text-sm font-bold uppercase tracking-wider mb-3">
                                 Best APG
                             </h3>
-                            <div className="text-2xl font-bold text-white mb-2">{bestApgPlayer.name}</div>
-                            <div className="text-5xl font-black text-orange mb-1" style={{ textShadow: '0 0 20px rgba(255, 107, 53, 0.3)' }}>
+                            <div className="text-xl md:text-2xl font-bold text-white mb-2">{bestApgPlayer.name}</div>
+                            <div className="text-4xl md:text-5xl font-black text-orange mb-1" style={{ textShadow: '0 0 20px rgba(255, 107, 53, 0.3)' }}>
                                 {bestApgPlayer.stats.apg}
                             </div>
                             <div className="text-gray-400 text-sm">Assists Per Game</div>
@@ -142,11 +142,11 @@ const StatsVisualization = () => {
 
                         {/* Column 3: Active Players */}
                         <div className="text-center md:text-left">
-                            <h3 className="text-[#e94560] text-sm font-bold uppercase tracking-wider mb-3">
+                            <h3 className="text-[#e94560] text-xs md:text-sm font-bold uppercase tracking-wider mb-3">
                                 Active Players
                             </h3>
-                            <div className="text-2xl font-bold text-white mb-2">Current Era</div>
-                            <div className="text-5xl font-black text-white mb-1">
+                            <div className="text-xl md:text-2xl font-bold text-white mb-2">Current Era</div>
+                            <div className="text-4xl md:text-5xl font-black text-white mb-1">
                                 {players.filter(p => p.active).length}
                             </div>
                             <div className="text-gray-400 text-sm">Still Playing</div>
@@ -162,7 +162,7 @@ const StatsVisualization = () => {
                                 <button
                                     key={view}
                                     onClick={() => setActiveView(view)}
-                                    className={`px-6 py-2 rounded-md font-semibold transition-all text-sm ${activeView === view ? 'bg-gold text-slate-900' : 'text-gray-400 hover:text-white'
+                                    className={`px-4 md:px-6 py-2 rounded-md font-semibold transition-all text-sm ${activeView === view ? 'bg-gold text-slate-900' : 'text-gray-400 hover:text-white'
                                         }`}
                                 >
                                     {view === 'total' ? 'Total Assists' : view === 'apg' ? 'APG' : 'Games'}
