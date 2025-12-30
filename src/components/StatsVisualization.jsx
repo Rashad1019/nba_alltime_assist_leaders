@@ -108,15 +108,14 @@ const StatsVisualization = () => {
                 {/* New Stats Summary Card */}
                 <div
                     data-aos="fade-up"
-                    className="mb-16"
+                    className="mb-16 p-6 md:p-10"
                     style={{
                         background: 'rgba(255, 255, 255, 0.05)',
                         borderRadius: '15px',
-                        padding: '40px',
                         border: '1px solid rgba(255, 255, 255, 0.1)'
                     }}
                 >
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
                         {/* Column 1: #1 All-Time Leader */}
                         <div className="text-center md:text-left border-b md:border-b-0 md:border-r border-white/10 pb-8 md:pb-0 md:pr-8 last:border-0">
                             <h3 className="text-[#ffd700] text-sm font-bold uppercase tracking-wider mb-3">

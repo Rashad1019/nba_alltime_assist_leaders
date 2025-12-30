@@ -170,9 +170,8 @@ const PlayerComparison = () => {
                         }
                     `}</style>
                     <h2
-                        className="mb-4"
+                        className="mb-4 text-3xl md:text-5xl"
                         style={{
-                            fontSize: '3rem',
                             fontWeight: 'bold',
                             background: 'linear-gradient(to right, #ff6b35, #ffd700)',
                             WebkitBackgroundClip: 'text',

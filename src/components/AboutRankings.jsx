@@ -3,19 +3,17 @@ import React from 'react';
 const AboutRankings = () => {
     return (
         <section
-            className="w-full max-w-6xl mx-auto"
+            className="w-full max-w-6xl mx-auto p-6 md:p-10 mt-10 md:mt-16"
             style={{
-                marginTop: '60px',
                 background: 'rgba(0,0,0,0.3)',
                 borderLeft: '4px solid #ff6b35',
-                borderRadius: '15px',
-                padding: '40px'
+                borderRadius: '15px'
             }}
         >
             <div className="grid md:grid-cols-2 gap-12">
                 {/* Left Column - Art of the Assist */}
                 <div>
-                    <h3 className="flex items-center gap-3 font-bold mb-6" style={{ fontSize: '1.8rem', color: '#ffd700' }}>
+                    <h3 className="flex items-center gap-3 font-bold mb-6 text-2xl md:text-3xl" style={{ color: '#ffd700' }}>
                         <span>🏀</span> The Art of the Assist
                     </h3>
                     <div style={{ maxWidth: '600px', lineHeight: '1.8', fontSize: '1.05rem', textAlign: 'justify' }}>
