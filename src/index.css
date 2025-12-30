@@ -1,0 +1,289 @@
+:root {
+  /* NBA-Themed Color Palette */
+  --color-bg-start: #1a1a2e;
+  --color-bg-end: #0f3460;
+  --color-surface: rgba(15, 52, 96, 0.7);
+  --color-surface-solid: #16213e;
+
+  /* Accent Colors */
+  --color-orange: #ff6b35;
+  --color-gold: #ffd700;
+  --color-red: #e94560;
+  --color-primary: #ffd700;
+
+  /* Text Colors */
+  --color-text: #ffffff;
+  --color-text-muted: #bbbbbb;
+
+  /* Status Badge Colors */
+  --color-active: #22c55e;
+  --color-retired: #6b7280;
+  --color-hof: #ffd700;
+
+  --font-heading: 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-glow-orange: 0 0 20px rgba(255, 107, 53, 0.4);
+  --shadow-glow-gold: 0 0 20px rgba(255, 215, 0, 0.4);
+
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, var(--color-bg-start) 0%, var(--color-bg-end) 100%);
+  background-attachment: fixed;
+  color: var(--color-text);
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Utility Classes */
+.text-gold {
+  color: var(--color-gold);
+}
+
+.text-orange {
+  color: var(--color-orange);
+}
+
+.text-red {
+  color: var(--color-red);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+/* Status Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-active {
+  background-color: rgba(34, 197, 94, 0.2);
+  color: var(--color-active);
+  border: 1px solid var(--color-active);
+}
+
+.badge-retired {
+  background-color: rgba(107, 114, 128, 0.2);
+  color: var(--color-retired);
+  border: 1px solid var(--color-retired);
+}
+
+.badge-hof {
+  background-color: rgba(255, 215, 0, 0.2);
+  color: var(--color-gold);
+  border: 1px solid var(--color-gold);
+}
+
+/* Base Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
+}
+
+/* Gradient Button - Primary CTA */
+.btn-gradient {
+  background: linear-gradient(135deg, var(--color-orange) 0%, var(--color-gold) 100%);
+  color: #1a1a2e;
+  font-weight: 700;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-gradient:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: var(--shadow-glow-orange);
+}
+
+.btn-gradient:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Filter Button Styles */
+.btn-filter {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  background-color: transparent;
+  color: var(--color-text-muted);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+}
+
+.btn-filter:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-text);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.btn-filter.active {
+  background: linear-gradient(135deg, var(--color-orange) 0%, var(--color-gold) 100%);
+  color: #1a1a2e;
+  border-color: transparent;
+}
+
+/* Card Styles */
+.card {
+  background: var(--color-surface);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), var(--shadow-glow-gold);
+  border-color: rgba(255, 215, 0, 0.3);
+}
+
+/* Stat Box Styles */
+.stat-box {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-gold);
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+}
+
+/* Rank Number Styling */
+.rank-number {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--color-gold);
+  text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+  line-height: 1;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+  }
+
+  .rank-number {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animation Utilities */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
